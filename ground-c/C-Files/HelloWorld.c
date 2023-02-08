@@ -16,7 +16,7 @@ int main(){
     printf("This\tline\thas\ttabs!\n"); // Print line with tabs
 
     /*
-        A backslach is used as escape sequence
+        A backslash is used as escape sequence
     */
 
     printf("Show how to print special characters like Quotes \" \'");
