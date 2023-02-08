@@ -13,3 +13,9 @@ Let's start a Browser and navigate to youtube and fillout the search bar...
 Voila, https://www.youtube.com/watch?v=87SH2Cn0s9A
 
 While watching the video, because watching Video's is boring let's follow the guy talking about C with an open window of vs-code (my favorite choice)
+
+See progress in [HelloWorld.c](./C-Files/HelloWorld.c)
+
+## Useful Links
+
+[Escape sequences](https://en.wikipedia.org//wiki/Escape_sequences_in_C#Table_of_escape_sequences)
