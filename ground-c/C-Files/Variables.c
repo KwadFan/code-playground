@@ -2,16 +2,15 @@
 
 int main(){
 
-
     // variable = Allocated space in Memory to store a value.
 
-    int x; // declaration of an integer variable
+    int x;   // declaration of an integer variable
     x = 123; // initialization
 
     int y = 321; // combined declaration and initialization
 
     // Basic Data types
-    int age = 21; // integer
+    int age = 21;     // integer
     float gpa = 2.05; // floating point number
     char grade = 'C'; // single character
 
