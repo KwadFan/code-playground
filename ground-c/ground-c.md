@@ -16,6 +16,8 @@ While watching the video, because watching Video's is boring let's follow the gu
 
 See progress in [HelloWorld.c](./C-Files/HelloWorld.c)
 
+Instead of typing a .c file with data types I used a overview from here [data types in C](https://www.geeksforgeeks.org/data-types-in-c/)
+
 ## Useful Links
 
 [Escape sequences](https://en.wikipedia.org//wiki/Escape_sequences_in_C#Table_of_escape_sequences)
