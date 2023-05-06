@@ -1,0 +1,3 @@
+# Kwad meets Python
+
+Let's get feets wet with python ...
