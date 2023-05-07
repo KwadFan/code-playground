@@ -46,7 +46,7 @@ Summarized to some basics:
 -   Use 4 spaces for indentation. Don't mix Tabs and spaces.
 -   Use LF line endings (`\n`) instead CRLF (as used in Windows - `\r\n`).
 -   Limit line length for code to 79 characters.
-    -   If your or your team wants to increase used line length
+    -   If you or your team wants to increase used line length
         limit those to 99 characters
 -   Use a limit of 72 characters for docstrings and/or comments
 -   Surround top-level functions and classes by two blank lines
