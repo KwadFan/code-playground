@@ -36,11 +36,20 @@ this means type of a variable can change during runtime.
 Other than statically typed languages, where the type has to be defined
 in the beginning.
 """
+# Variables in UPPERCASE letters are constants in naming convention
+CONSTANT_SCOPE_VARIABLE = "Global"
+
 
 # The main function will be only executed if the script is not imported
 def main():
+    local_scope_variable = "foo"
+    print(CONSTANT_SCOPE_VARIABLE)
     print("Hello World!")
-
+    print(local_scope_variable)
+    local_scope_variable = 1
+    print(local_scope_variable)
+    local_scope_variable = local_scope_variable + 2
+    print(local_scope_variable)
 
 if __name__ == "__main__":
     main()
