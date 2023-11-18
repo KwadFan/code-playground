@@ -24,4 +24,5 @@ IMAGE_DESCRIPTION="A brief fooo for the crowds"
 # Normally DIST_NAME is in 'default' configuration file,
 # but this will be put together in Buildchain from different files.
 # Just for POC added.
+# shellcheck disable=SC2034
 DIST_NAME="MainsailOS"
