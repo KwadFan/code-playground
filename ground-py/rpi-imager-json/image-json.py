@@ -62,10 +62,10 @@ elif "rpi64" in sbc:
 version = "1.2.1" # ${{ github.event.inputs.version }}
 
 # Concatenate name
-name = 'Mainsail OS {} {}'.format(version, os_type)
+name = f'Mainsail OS {version} {os_type}'
 
 # Construct url
-url = '{}{}/{}{}'.format(base_url, version, image, ".img.xz")
+url = f'{base_url}{version}/{image}.img.xz'
 
 # Get release date
 release_date = "2023-05-26" # ${{ needs.release.outputs.date }}
