@@ -18,3 +18,10 @@ export DOWNLOAD_URL_IMAGE
 ### rpi-imager.json
 # shellcheck disable=SC2034
 SUPPORTED_SBC="p1-32bit p2-32bit pi3-32bit"
+# shellcheck disable=SC2034
+IMAGE_DESCRIPTION="A brief fooo for the crowds"
+
+# Normally DIST_NAME is in 'default' configuration file,
+# but this will be put together in Buildchain from different files.
+# Just for POC added.
+DIST_NAME="MainsailOS"

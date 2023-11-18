@@ -36,10 +36,10 @@
 '''
 
 import json
+import re
 
 base_url = "https://github.com/mainsail-crew/MainsailOS/releases/download/"
 image = "2023-05-26-MainsailOS-1.2.1-raspberry-rpi32" # ${{ steps.move-image.outputs.image }}
-description = "A port of Raspberry Pi OS with basic components to run Mainsail"
 icon = "https://os.mainsail.xyz/rpi-imager.png"
 
 # Read config for SUPPORTED_SBC
@@ -50,6 +50,17 @@ with open('./config', 'r') as file:
             line = line.replace('SUPPORTED_SBC=', '')
             line = line.replace('"', '')
             sbcs = line.split()
+        if line.startswith('DIST_NAME'):
+            line = line.replace('DIST_NAME=', '')
+            line = line.replace('"', '')
+            if "MainsailOS" in line:
+                name = re.sub('OS', ' OS', line)
+            else:
+                name = line
+        if line.startswith('IMAGE_DESCRIPTION'):
+            line = line.replace('IMAGE_DESCRIPTION=', '')
+            line = line.replace('"', '')
+            description = line
 
 # Get os_type = 32bit / 64bit
 sbc = "rpi32" # ${{ steps.build.outputs.sbc }}
@@ -62,7 +73,7 @@ elif "rpi64" in sbc:
 version = "1.2.1" # ${{ github.event.inputs.version }}
 
 # Concatenate name
-name = f'Mainsail OS {version} {os_type}'
+name = f'{name} {version} {os_type}'
 
 # Construct url
 url = f'{base_url}{version}/{image}.img.xz'
