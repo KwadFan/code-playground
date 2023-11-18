@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Shebang for better file detection
+
+# Declare Variables before exporting.
+# See https://www.shellcheck.net/wiki/SC2155
+
+# Keep for Bookworm template
+# DOWNLOAD_URL_CHECKSUM="https://downloads.raspberrypi.org/raspios_lite_armhf_latest.sha256"
+# DOWNLOAD_URL_IMAGE="https://downloads.raspberrypi.org/raspios_lite_armhf_latest.torrent"
+
+# New locations after Bullseye turned into 'oldstable'
+DOWNLOAD_URL_CHECKSUM="https://downloads.raspberrypi.com/raspios_oldstable_lite_armhf/images/raspios_oldstable_lite_armhf-2023-10-10/2023-05-03-raspios-bullseye-armhf-lite.img.xz.sha256"
+DOWNLOAD_URL_IMAGE="https://downloads.raspberrypi.com/raspios_oldstable_lite_armhf/images/raspios_oldstable_lite_armhf-2023-10-10/2023-05-03-raspios-bullseye-armhf-lite.img.xz.torrent"
+
+export DOWNLOAD_URL_CHECKSUM
+export DOWNLOAD_URL_IMAGE
+
+### rpi-imager.json
+# shellcheck disable=SC2034
+SUPPORTED_SBC="p1-32bit p2-32bit pi3-32bit"
