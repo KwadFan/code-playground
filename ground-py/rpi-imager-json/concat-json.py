@@ -19,9 +19,11 @@ os_list = []
 # init data dict
 data = {}
 
-for file in os.listdir(os.getcwd()):
+download_dir = f'{os.getcwd()}/downloads'
+
+for file in os.listdir(download_dir):
     if file.endswith('.json'):
-        file = os.path.join(os.getcwd(), file)
+        file = os.path.join(download_dir, file)
         json_files.append(file)
 # sort file list
 json_files.sort()
@@ -32,9 +34,13 @@ for json_file in json_files:
         json_string = json.load(file)
         os_list.append(json_string)
 
+
+
 # convert dict to json
 data = {"os-list": os_list}
 data = json.dumps(data)
+
+print(data)
 
 with open('./rpi-imager.json', 'w') as rpi_json_file:
     rpi_json_file.write(data)

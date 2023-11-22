@@ -110,7 +110,7 @@ data.update({"devices": sbcs})
 data = json.dumps(data)
 
 # Write to file ${{ steps.move-image.outputs.image }}
-output_file = "./{}.json".format(image)
+output_file = f'./{image}.json'
 
 with open(output_file, "w") as json_file:
     json_file.write(data)
