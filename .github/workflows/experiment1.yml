@@ -26,4 +26,4 @@ jobs:
       - name: Lets put something to it
         shell: bash
         run: |
-          echo "foo" >> $GITHUB_OUTPUT
+          echo "foo=bar" >> $GITHUB_OUTPUT
