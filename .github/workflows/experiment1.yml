@@ -43,3 +43,8 @@ jobs:
         shell: bash
         run: |
           echo ${{ steps.put-foo.outputs.foo }}
+
+      - name: Lets see what GITHUB_STEP_SUMMARY does
+        shell: bash
+        run: |
+          echo ${{ steps.put-foo.outputs.foo }} >> $GITHUB_STEP_SUMMARY
