@@ -48,3 +48,8 @@ jobs:
         shell: bash
         run: |
           echo ${{ steps.put-foo.outputs.foo }} >> $GITHUB_STEP_SUMMARY
+
+      - name: Is GITHUB_STEP_SUMMARY a file?
+        shell: bash
+        run: |
+          file $GITHUB_STEP_SUMMARY
