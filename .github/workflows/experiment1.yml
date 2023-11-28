@@ -22,3 +22,8 @@ jobs:
         shell: bash
         run: |
           file $GITHUB_OUTPUT
+
+      - name: Lets put something to it
+        shell: bash
+        run: |
+          echo "foo" >> $GITHUB_OUTPUT
