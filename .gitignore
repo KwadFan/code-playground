@@ -1,5 +1,6 @@
 ## Ignore .vscode
 .vscode
+.vscode/**
 
 ## ignore .out
 **/*.out
