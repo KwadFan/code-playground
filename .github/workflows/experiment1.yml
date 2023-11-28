@@ -24,6 +24,7 @@ jobs:
           file $GITHUB_OUTPUT
 
       - name: Lets put something to it
+        id: put-foo
         shell: bash
         run: |
           echo "foo=bar" >> $GITHUB_OUTPUT
@@ -37,3 +38,8 @@ jobs:
         shell: bash
         run: |
           cat $GITHUB_OUTPUT
+
+      - name: Read output if it is not a file
+        shell: bash
+        run: |
+          echo ${{ steps.put-foo.outputs.foo }}
