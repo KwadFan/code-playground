@@ -32,3 +32,8 @@ jobs:
         shell: bash
         run: |
           file $GITHUB_OUTPUT
+
+      - name: Can we read from it?
+        shell: bash
+        run: |
+          cat $GITHUB_OUTPUT
