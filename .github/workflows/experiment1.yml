@@ -27,3 +27,8 @@ jobs:
         shell: bash
         run: |
           echo "foo=bar" >> $GITHUB_OUTPUT
+
+      - name: Lets see is it a file?
+        shell: bash
+        run: |
+          file $GITHUB_OUTPUT
