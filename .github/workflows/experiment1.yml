@@ -58,3 +58,8 @@ jobs:
         shell: bash
         run: |
           cat $GITHUB_STEP_SUMMARY
+
+      - name: Can we 'echo' from it?
+        shell: bash
+        run: |
+          echo $GITHUB_STEP_SUMMARY
