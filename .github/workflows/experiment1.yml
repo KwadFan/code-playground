@@ -54,7 +54,7 @@ jobs:
         run: |
           file $GITHUB_STEP_SUMMARY
 
-          - name: Can we read from it?
+      - name: Can we read from it?
         shell: bash
         run: |
           cat $GITHUB_STEP_SUMMARY
