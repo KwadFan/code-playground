@@ -1,0 +1,22 @@
+name: Experiment1
+
+  on:
+    push:
+      branches:
+        - "main"
+      paths:
+        - ".github/workflows/experiment1.yaml"
+
+    workflow_dispatch:
+
+
+jobs:
+  experiment1:
+    name: Experiment1
+    runs-on: ubuntu-latest
+    steps:
+      - name: What is inside GITHUB_OUTPUT variable
+        shell: bash
+        run: |
+          echo "$GITHUB_OUTPUT"
+
