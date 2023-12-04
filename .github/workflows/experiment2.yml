@@ -1,0 +1,39 @@
+name: Experiment1
+
+on:
+  push:
+    branches:
+      - "main"
+    paths:
+      - ".github/workflows/experiment2.yml"
+  workflow_dispatch:
+
+jobs:
+  experiment2:
+    name: Experiment2
+    runs-on: ubuntu-latest
+    steps:
+      - name: Lets put something to it
+        id: put-foo
+        shell: bash
+        run: |
+          echo "foo=bar" >> $GITHUB_OUTPUT
+
+      - name: Lets put something to it
+        id: put-bar
+        shell: bash
+        run: |
+          echo "bar=foobar" >> $GITHUB_OUTPUT
+
+      - name: Lets put something to it
+        id: put-buzz
+        shell: bash
+        run: |
+          echo "buzz=foobarbuzz" >> $GITHUB_OUTPUT
+
+      - name: Print all
+        shell: bash
+        run: |
+          while read -r line; do
+            echo -e "${line}"
+          done <$GITHUB_OUTPUT
