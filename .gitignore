@@ -2,6 +2,10 @@
 .vscode
 .vscode/**
 
+## Ignore .idea
+.idea
+.idea/**
+
 ## ignore .out
 **/*.out
 
